@@ -110,6 +110,8 @@ def total_least_squares(data1, data2, data1err=None, data2err=None,
         if badvals.sum():
             data1 = data1[goodvals]
             data2 = data2[goodvals]
+    else:
+        goodvals = slice(None)
 
     
     if intercept:
